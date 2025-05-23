@@ -59,7 +59,7 @@ const addComment = () => {
     task.value.comment = [];
   }
   task.value.comment?.push({
-    name: "Kirill",
+    name: "Kelly",
     comment: comment.value,
     data: "To Day, 12:31",
   });
@@ -171,7 +171,7 @@ const addComment = () => {
             </div>
           </transition>
           <div class="comment-block">
-            <div v-if="!isComment" class="avatar">К</div>
+            <div v-if="!isComment" class="avatar">K</div>
             <el-input
               @focus="isComment = true"
               v-if="!isComment"
@@ -214,7 +214,6 @@ const addComment = () => {
         </div>
       </div>
 
-      <!-- Правая часть -->
       <div class="right-panel">
         <div class="info-row">
           <span class="label">Проект</span>

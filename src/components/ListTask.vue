@@ -77,8 +77,7 @@ const doneTask = (index: number) => {
           getNewTime()
         );
       }
-      props.tasks.splice(index, 1);
-      props.tasks[index].done = true;
+
       ElNotification({
         title: "Success",
         message: `This task is done`,

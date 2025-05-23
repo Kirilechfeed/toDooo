@@ -60,7 +60,7 @@ const addNewTask = () => {
   task = {
     id: id.value,
     name: nameTask.value,
-    time: "dasdasd",
+    time: "",
     done: false,
     timeDone: "",
     description: taskDescription.value,

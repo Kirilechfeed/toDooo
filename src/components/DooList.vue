@@ -140,10 +140,14 @@ const getDoneTask = (
   if (project)
     if (indexSection != -1) {
       project.section[indexSection].task[index].timeDone = time;
+      project.section[indexSection].task[index].done = true;
       doneTask.value.unshift(project.section[indexSection].task[index]);
+      project.section[indexSection].task.splice(index, 1);
     } else {
       project.tasks[index].timeDone = time;
+      project.tasks[index].done = true;
       doneTask.value.unshift(project.tasks[index]);
+      project.tasks.splice(index, 1);
     }
 };
 const filteredProjects = computed(() =>
@@ -170,27 +174,6 @@ provide("addAbove", placeForAdd);
 provide("addBelow", placeForAdd);
 provide("currentProject", filteredProjects);
 provide("switchActive", switchActive);
-
-// const getNewData = () => {
-//   const today = new Date();
-
-//   const day = String(today.getDate()).padStart(2, "0");
-//   const month = String(today.getMonth() + 1).padStart(2, "0");
-//   const year = today.getFullYear();
-
-//   const formattedDate = `${day}-${month}-${year}`;
-//   return formattedDate;
-// };
-
-// const getNewTime = () => {
-//   const now = new Date();
-
-//   const hours = String(now.getHours()).padStart(2, "0");
-//   const minutes = String(now.getMinutes()).padStart(2, "0");
-
-//   const formattedTime = `${hours}:${minutes}`;
-//   return formattedTime;
-// };
 </script>
 
 <template>

@@ -13,7 +13,24 @@ const currentSection = ref(-1);
 const currentSectionForTasks = ref(-1);
 const buttonActive = ref(false);
 const newName = ref("");
-
+const elementMenuSection = [
+  {
+    name: "Add archive",
+    icon: "DataLine",
+    style: "",
+    disabled: true,
+    visible: true,
+    action: MenuAction.Archive,
+  },
+  {
+    name: "Delete",
+    icon: "Delete",
+    style: "",
+    disabled: false,
+    visible: true,
+    action: MenuAction.Delete,
+  },
+];
 const renameSection = (index: number) => {
   currentSection.value = index;
   newName.value = props.listSection[index].name;
@@ -64,6 +81,7 @@ const handleAction = (action: MenuAction, index: number) => {
         <span @click="renameSection(index)">{{ n.name }}</span>
       </div>
       <MenuSetting
+        :listMenu="elementMenuSection"
         @select="(action) => handleAction(action, index)"
         :size="20"
         :name="'section'"

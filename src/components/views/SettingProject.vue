@@ -97,8 +97,6 @@ const addNewTask = (task: ITask) => {
 h2 {
   margin-bottom: 20px;
 }
-.main-project {
-}
 .addNewTask {
   display: flex;
   align-items: center;

@@ -359,8 +359,6 @@ onMounted(() => {
   align-items: center;
   gap: 10px;
 }
-.add-item {
-}
 .input {
   display: flex;
 }
