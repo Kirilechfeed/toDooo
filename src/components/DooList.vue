@@ -17,7 +17,7 @@ import type { IProject, ITask } from "../models/index";
 import router from "../router";
 import { MenuAction } from "../enum/index";
 import type { DropdownInstance } from "element-plus";
-import TodayTask from "./views/TodayTask.vue";
+
 const dropdown1 = ref<DropdownInstance>();
 const myProject = ref<IProject[]>([]);
 const visible = ref(false);
@@ -242,7 +242,6 @@ provide("switchActive", switchActive);
           </div>
         </div>
       </el-header>
-      <TodayTask></TodayTask>
       <el-container>
         <el-aside width="400px" class="aside-menu"
           ><Aside

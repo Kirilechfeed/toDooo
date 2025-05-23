@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { ref, inject } from "vue";
-import { ElEmpty, ElInput, ElIcon, ElButton, ElPopover } from "element-plus";
+import { ElEmpty, ElIcon, ElButton, ElPopover } from "element-plus";
 import ListProject from "../ListProject.vue";
 import type { IProject } from "@/models/index";
 
